@@ -1,4 +1,4 @@
-Source: ofono
+Source: ofono-ubports
 Section: admin
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -24,10 +24,11 @@ Homepage: http://www.ofono.org/
 Vcs-Bzr: https://code.launchpad.net/~phablet-team/ofono/ubuntu
 Vcs-Browser: http://bazaar.launchpad.net/~phablet-team/ofono/ubuntu
 
-Package: ofono
+Package: ofono-ubports
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, dbus
 Recommends: udev
+Conflicts: ofono, ofono-sailfish
 Description: Mobile telephony stack (daemon)
  oFono is a stack for mobile telephony devices on Linux.  oFono supports
  speaking to telephony devices through specific drivers, or with generic
@@ -40,11 +41,12 @@ Description: Mobile telephony stack (daemon)
  .
  This package includes the core daemon.
 
-Package: ofono-dev
+Package: ofono-ubports-dev
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libdbus-1-dev, libglib2.0-dev,
          libc6-dev | libc-dev
+Conflicts: ofono-dev, ofono-sailfish-dev
 Description: Mobile telephony stack (development files)
  oFono is a stack for mobile telephony devices on Linux.  oFono supports
  speaking to telephony devices through specific drivers, or with generic
@@ -57,11 +59,12 @@ Description: Mobile telephony stack (development files)
  .
  This package includes the header files for building oFono plugins.
 
-Package: ofono-dbg
+Package: ofono-ubports-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ofono (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, ofono-ubports (= ${binary:Version})
+Conflicts: ofono-dbg, ofono-sailfish-dbg
 Description: Mobile telephony stack (debugging files)
  oFono is a stack for mobile telephony devices on Linux.  oFono supports
  speaking to telephony devices through specific drivers, or with generic
@@ -74,14 +77,15 @@ Description: Mobile telephony stack (debugging files)
  .
  This package contains detached debugging symbols for the daemon.
 
-Package: ofono-scripts
+Package: ofono-ubports-scripts
 Architecture: all
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         ofono (>= ${source:Version}),
+         ofono-ubports (>= ${source:Version}),
 	 python3,
 	 python3-dbus,
 	 python3-gi
+Conflicts: ofono-scripts, ofono-sailfish-scripts
 Description: Mobile telephony stack (test and maintenance script files)
  oFono is a stack for mobile telephony devices on Linux.  oFono supports
  speaking to telephony devices through specific drivers, or with generic
