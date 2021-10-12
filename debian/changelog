@@ -1,3 +1,9 @@
+ofono-ubports (1.18.0+ubports4) focal; urgency=medium
+
+  * Properly rename install files
+
+ -- Guido Berhoerster <guido+gitlab.com@berhoerster.name>  Tue, 12 Oct 2021 13:12:00 +0200
+
 ofono-ubports (1.18.0+ubports3) focal; urgency=medium
 
   [ Guido Berhoerster ]
