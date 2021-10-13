@@ -1,4 +1,4 @@
-ofono-ubports (1.18.0-0ubports4) focal; urgency=medium
+ofono-ubports (1.18.0+ubports4) focal; urgency=medium
 
   * Properly rename install files
 
