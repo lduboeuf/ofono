@@ -1,3 +1,9 @@
+ofono-ubports (1.18.0+ubports5) focal; urgency=medium
+
+  * Rebuild without changes
+
+ -- Guido Berhoerster <guido+gitlab.com@berhoerster.name>  Wed, 13 Oct 2021 19:34:39 +0200
+
 ofono-ubports (1.18.0+ubports4) focal; urgency=medium
 
   * Properly rename install files
