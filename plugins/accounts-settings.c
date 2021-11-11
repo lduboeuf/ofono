@@ -46,7 +46,7 @@
 
 #define ACCOUNTS_SERVICE          "org.freedesktop.Accounts"
 #define ACCOUNTS_PATH             "/org/freedesktop/Accounts/User"
-#define ACCOUNTS_PHONE_INTERFACE  "com.ubuntu.touch.AccountsService.Phone"
+#define ACCOUNTS_PHONE_INTERFACE  "com.lomiri.touch.AccountsService.Phone"
 #define DBUS_PROPERTIES_INTERFACE "org.freedesktop.DBus.Properties"
 
 struct setting {
