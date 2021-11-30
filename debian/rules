@@ -1,5 +1,8 @@
 #!/usr/bin/make -f
 
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
 CFLAGS += -Wall -Wextra \
 	-Wno-unused-parameter \
 	-Wno-missing-field-initializers \
@@ -10,19 +13,14 @@ CFLAGS += -Wall -Wextra \
 	-DG_DISABLE_DEPRECATED
 
 CONFIGURE_FLAGS := \
-	--enable-android-wakelock
+	--enable-android-wakelock \
+	--with-systemdunitdir=/lib/systemd/system
 
 %:
-	dh $@ --parallel --with=autoreconf,systemd
+	dh $@ --with=autoreconf
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(CONFIGURE_FLAGS)
 
-override_dh_installinit:
-	dh_installinit --no-restart-on-upgrade
-
-override_dh_install:
-	dh_install --list-missing
-
-override_dh_strip:
-	dh_strip --dbg-package=ofono-ubports-dbg
+override_dh_installsystemd:
+	dh_installsystemd --name=ofono

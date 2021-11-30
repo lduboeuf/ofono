@@ -1,3 +1,14 @@
+ofono-ubports (1.18.0+ubports6) focal; urgency=medium
+
+  * Update to dh version 12
+  * Update dependencies
+  * Clean up obsolete files and make the packaging data consistent with ofono
+    and ofono-ubports
+  * Remove manual dbg package
+  * Update homepage and VCS URLs
+
+ -- Guido Berhoerster <guido+gitlab.com@berhoerster.name>  Fri, 26 Nov 2021 16:22:31 +0100
+
 ofono-ubports (1.18.0+ubports5) focal; urgency=medium
 
   * Rebuild without changes

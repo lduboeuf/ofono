@@ -1,12 +1,12 @@
 [Unit]
-Description=Telephony service
-After=syslog.target
+Description=oFono Mobile telephony stack
+Documentation=man:ofonod(8)
 
 [Service]
 Type=dbus
 BusName=org.ofono
-ExecStart=@prefix@/sbin/ofonod -n
-StandardError=null
+ExecStart=@prefix@/sbin/ofonod -P ril --nodetach
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
