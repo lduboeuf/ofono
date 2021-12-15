@@ -23,6 +23,7 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, dbus
 Recommends: udev
 Conflicts: ofono, ofono-sailfish
+Provides: ofono
 Description: Mobile telephony stack (daemon)
  oFono is a stack for mobile telephony devices on Linux and this package
  contains a fork of version 1.18 by the UBports project with support added for
@@ -46,6 +47,7 @@ Depends: ${shlibs:Depends},
          libglib2.0-dev,
          libc6-dev | libc-dev
 Conflicts: ofono-dev, ofono-sailfish-dev
+Provides: ofono-dev
 Description: Mobile telephony stack (development files)
  oFono is a stack for mobile telephony devices on Linux and this package
  contains a fork of version 1.18 by the UBports project with support added for
